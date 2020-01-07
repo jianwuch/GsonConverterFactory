@@ -1,3 +1,4 @@
+在集成使用Retrofit过程中，后台返回的数据格式不固定（成功和错误的时候不固定，导致无法序列出错误码出来），替代com.squareup.retrofit2:converter-gson
 # GsonConverterFactory
 http返回的code码在业务逻辑中的处理
 # 需要解决的问题
