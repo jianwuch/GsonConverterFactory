@@ -17,3 +17,13 @@ http返回的code码在业务逻辑中的处理
 当你使用Rxjava的时候不会因为序列化不到基础的Model(至少有code信息),永远走Rxjava的`Observer.onError（Throwable e）`而无法精细处理业务逻辑码
 # 是否有别的方式
 有，找个处理了这个问题的Gson特定第三方个人修改版本
+
+# 使用方式
+源码拷贝到你的工程中
+```
+    retrofit = new Retrofit.Builder().baseUrl(HOST)
+        .client(okHttpClient)
+        .addConverterFactory(CustomGsonConverterFactory.create())
+        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+        .build();
+```
