@@ -8,7 +8,7 @@ http返回的code码在业务逻辑中的处理
 {
   "code": 402,----->后台服务器业务相关码
   "msg": "请输入Signtoken or Timestamp",
-  "data": ""------>有可能的情况1.`"data": {}`2.`"data": []`
+  "data": ""------>有可能的情况1.`"data": {}`2.`/"data": []`
 }
 ```
 这样的情况，当我们使用`com.squareup.retrofit2:converter-gson`的时候经常报json数据格式不对，无法序列化到你的model bean类
